@@ -335,6 +335,16 @@ button {
   color: var(--color-primary);
   font-weight: 600;
   margin-bottom: var(--space-lg);
+  min-height: 1.6em;
+}
+
+.typed-cursor {
+  animation: blink 0.7s step-end infinite;
+  font-weight: 400;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .hero-description {

@@ -99,6 +99,9 @@ function initPage(currentPage) {
 
   // 4. Initialize mobile menu
   initMobileMenu();
+
+  // 5. Initialize typed role effect (home page)
+  initTypedRole();
 }
 
 // ============================================
@@ -163,6 +166,46 @@ function initMobileMenu() {
       });
     });
   }
+}
+
+// ============================================
+// TYPED ROLE EFFECT
+// ============================================
+function initTypedRole() {
+  const el = document.getElementById('typed-role');
+  if (!el) return;
+
+  const roles = ['AI Software Engineer', 'Researcher', 'ML Engineer', 'Mathematics Enthusiast'];
+  const typeSpeed = 80;
+  const deleteSpeed = 40;
+  const pauseAfterType = 1800;
+  const pauseAfterDelete = 400;
+  let roleIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    const role = roles[roleIndex];
+    if (charIndex < role.length) {
+      el.textContent += role.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typeSpeed);
+    } else {
+      setTimeout(erase, pauseAfterType);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      el.textContent = el.textContent.slice(0, -1);
+      charIndex--;
+      setTimeout(erase, deleteSpeed);
+    } else {
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(type, pauseAfterDelete);
+    }
+  }
+
+  type();
 }
 
 // ============================================
