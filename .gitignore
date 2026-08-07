@@ -3,6 +3,7 @@ node_modules
 # Private documents — do NOT push to public GitHub
 resumes/
 Transcripts/
+Research
 
 # OS files
 .DS_Store

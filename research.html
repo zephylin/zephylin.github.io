@@ -17,25 +17,120 @@
   <main class="section" style="padding-top: calc(var(--nav-height) + var(--space-2xl));">
     <div class="container">
       <h1 class="section-title">Research</h1>
-      <p class="research-intro">
-        My research experience spans computer vision, facial recognition systems, and applied machine learning. 
-        I'm interested in how AI can be applied to solve practical problems — from automating routine tasks 
-        to building intelligent systems that augment human decision-making.
+      <p class="research-profile-statement">
+        I work on natural language processing and large language model (LLM) systems for high-stakes
+        domains such as healthcare and education. My central conviction is that the ability to
+        <em>check</em> a language model's output is as valuable as the output itself. I focus on making
+        LLM-based systems not only capable, but <strong>grounded, evaluable, and trustworthy</strong> —
+        bridging production engineering with research on reliability. I am pursuing this both as a PhD
+        research direction in Computer Science and in my day-to-day work building clinical AI systems in industry.
       </p>
+
+      <!-- Research Focus / Pillars -->
+      <section class="section">
+        <h2 class="section-title">Research Focus</h2>
+        <p class="research-intro">
+          Two questions anchor my research — spanning both the theoretical foundations of language
+          modeling and the practical challenges of deploying AI where being wrong has real consequences.
+        </p>
+        <div class="research-pillars">
+          <div class="research-pillar">
+            <h3>Reliability &amp; Interpretability of LLM-Based Evaluation</h3>
+            <p>
+              An LLM judge can score the same output differently across runs, and a single aggregate
+              score rarely explains what went wrong. I study how design choices — decomposing a score
+              into separate rubric dimensions, constraining an evaluator's output format, and reducing
+              sampling temperature — determine whether its judgment can be trusted and understood by the
+              people who must act on it.
+            </p>
+          </div>
+          <div class="research-pillar">
+            <h3>Grounding Generation in Verified Knowledge</h3>
+            <p>
+              Retrieving the right information does not guarantee a model actually used it, and an answer
+              can appear grounded even when it was reconstructed from memory. I study the mechanisms a
+              system uses to decide <em>when</em> and <em>what</em> to retrieve, and how we verify that
+              retrieved evidence is faithfully reflected in the output rather than merely consistent with it.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <!-- Research Interests -->
       <section class="section">
         <h2 class="section-title">Research Interests</h2>
         <div class="research-interests">
-          <span class="research-interest-tag">Computer Vision</span>
           <span class="research-interest-tag">Natural Language Processing</span>
-          <span class="research-interest-tag">Deep Learning</span>
-          <span class="research-interest-tag">Applied Machine Learning</span>
-          <span class="research-interest-tag">Object Detection (YOLO)</span>
-          <span class="research-interest-tag">Facial Recognition</span>
-          <span class="research-interest-tag">Agentic AI & LLM Systems</span>
+          <span class="research-interest-tag">Large Language Models</span>
+          <span class="research-interest-tag">Trustworthy AI</span>
+          <span class="research-interest-tag">LLM Evaluation (LLM-as-Judge)</span>
           <span class="research-interest-tag">Retrieval-Augmented Generation</span>
+          <span class="research-interest-tag">Hallucination &amp; Faithfulness</span>
           <span class="research-interest-tag">AI for Healthcare</span>
+          <span class="research-interest-tag">AI for Education</span>
+          <span class="research-interest-tag">Human-Centered AI</span>
+        </div>
+      </section>
+
+      <!-- Publications & Ongoing Work -->
+      <section class="section">
+        <h2 class="section-title">Publications &amp; Ongoing Work</h2>
+        <p class="research-intro">
+          Manuscripts currently in preparation. Each links a short summary of the contribution;
+          full papers and preprints will be posted as they are released.
+        </p>
+
+        <!-- Paper 1: AfiaSync — LLM-as-Judge evaluation (first author) -->
+        <div class="publication-item">
+          <div class="pub-header">
+            <h3>Reliable and Interpretable LLM-as-a-Judge Evaluation for Clinical Documentation</h3>
+            <span class="pub-status pub-status--prep">In Preparation</span>
+          </div>
+          <p class="pub-authors">Zephylin Dusengimana, et al. &middot; <strong>First author</strong></p>
+          <p class="pub-venue">Applied research from work at AfiaSync &middot; targeting a peer-reviewed venue</p>
+          <p class="pub-abstract">
+            LLM judges can score the same clinical note differently across runs, and a single aggregate
+            score rarely explains what specifically went wrong — a serious problem in a setting where a
+            single error can affect patient safety. This work studies how design choices, including
+            decomposing a score into separate rubric dimensions (accuracy, completeness, safety),
+            constraining the evaluator's output to a fixed schema, and lowering sampling temperature,
+            affect whether an automated judge's decisions are reliable and interpretable enough for
+            clinicians to act on. The evaluator explicitly lists hallucinated findings and omitted real
+            findings, and is validated against structured clinical notes generated from real encounters.
+          </p>
+          <div class="pub-tags">
+            <span class="pub-tag">LLM-as-Judge</span>
+            <span class="pub-tag">Evaluation</span>
+            <span class="pub-tag">Healthcare NLP</span>
+            <span class="pub-tag">Reliability</span>
+          </div>
+        </div>
+
+        <!-- Paper 2: Yin-AI — multimodal agent evaluation (co-author) -->
+        <!-- TODO: confirm exact author list / order and any preprint link before publishing. -->
+        <div class="publication-item">
+          <div class="pub-header">
+            <h3>Yin-AI: A Multimodal Conversational Agent with Voice, Memory, and Document Generation</h3>
+            <span class="pub-status pub-status--prep">In Preparation</span>
+          </div>
+          <p class="pub-authors">Collaborative work &middot; Zephylin Dusengimana (<strong>co-author</strong>)</p>
+          <p class="pub-venue">Multimodal conversational AI &middot; targeting a peer-reviewed venue</p>
+          <p class="pub-abstract">
+            Yin-AI is a multimodal conversational agent that unifies voice input, file-context reasoning,
+            persistent cross-session memory, and structured document generation. My contribution centers
+            on <strong>evaluation</strong>: designing and analyzing how the agent is scored, focusing on
+            response quality measured against human ratings and voice-recognition accuracy across
+            different speakers and noise conditions.
+          </p>
+          <div class="pub-tags">
+            <span class="pub-tag">Multimodal AI</span>
+            <span class="pub-tag">Conversational Agents</span>
+            <span class="pub-tag">Evaluation</span>
+            <span class="pub-tag">Speech</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://giscard-ai.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+          </div>
         </div>
       </section>
 
@@ -44,44 +139,43 @@
         <h2 class="section-title">Research Experience</h2>
         <div class="timeline">
           <div class="timeline-item">
+            <p class="timeline-date">Jan 2026 — Present</p>
+            <h3 class="timeline-title">Applied Research — LLM Evaluation &amp; Reliability</h3>
+            <p class="timeline-company">AfiaSync — Atlanta, GA</p>
+            <div class="timeline-description">
+              <ul>
+                <li>Designed a two-layer evaluation harness for clinical documentation: a deterministic rubric evaluator plus an LLM-as-judge that scores generated notes on accuracy, completeness, and safety, explicitly listing hallucinated findings and omitted real findings</li>
+                <li>Improved evaluator reliability by lowering sampling temperature for reproducible scoring and enforcing a fixed output schema, raising rubric-based quality scores from 40% to 80% across iterations</li>
+                <li>Investigated grounding in LLM generation through retrieval-augmented pipelines, studying when retrieved evidence is faithfully reflected in outputs versus reconstructed from model memory</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
             <p class="timeline-date">Mar 2022 — May 2024</p>
             <h3 class="timeline-title">Undergraduate Research Assistant</h3>
             <p class="timeline-company">AI and Computer Vision Lab — Kyungdong University, South Korea</p>
             <div class="timeline-description">
               <ul>
-                <li>Researched and developed a multi-scale object detection model using YOLOv11, enhancing accuracy by 25% across varied conditions and achieving 100% detection in real-world environmental monitoring scenarios</li>
-                <li>Developed a facial recognition-based attendance system using InsightFace achieving 96% recognition accuracy across 5,000+ records</li>
-                <li>Designed end-to-end data ingestion pipelines for capturing, processing, and storing facial recognition embeddings</li>
-                <li>Evaluated model performance using precision, recall, and F1 metrics</li>
+                <li>Built a facial-recognition attendance system using InsightFace, achieving 96% recognition accuracy across 5,000+ records</li>
+                <li>Designed end-to-end data ingestion pipelines for capturing, processing, and storing facial-recognition embeddings</li>
+                <li>Evaluated model performance using precision, recall, and F1 metrics under varied real-world conditions</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Publications -->
-      <section class="section">
-        <h2 class="section-title">Publications</h2>
-
-        <div class="publication-item">
-          <h3>Automated Attendance Management System Using Facial Recognition</h3>
-          <p class="pub-authors">Zephylin Dusengimana, et al.</p>
-          <p class="pub-venue">AI and Computer Vision Lab, Kyungdong University</p>
-          <span class="pub-status">In Preparation</span>
-        </div>
-
-        <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-lg);">
-          Additional publications will be listed here as they become available.
-        </p>
-      </section>
-
-      <!-- Academic CV Download -->
+      <!-- Academic Documents & Links -->
       <section class="section">
         <h2 class="section-title">Academic Documents</h2>
         <p style="color: var(--color-text-secondary); margin-bottom: var(--space-lg);">
-          For a comprehensive overview of my academic background, please download my CV.
+          For a comprehensive overview of my academic background, publications, and awards, download my CV.
         </p>
-        <a href="./assets/docs/Zephylin_Dusengimana_CV.pdf" class="btn btn-primary" download>Download Academic CV</a>
+        <div class="research-links">
+          <a href="./assets/docs/Zephylin_Dusengimana_CV.pdf" class="btn btn-primary" download>Download Academic CV</a>
+          <a href="https://github.com/zephylin" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/zephylin-d/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
       </section>
 
     </div>
