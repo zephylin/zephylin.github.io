@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://zephylindusengimana.com/sitemap.xml
+Sitemap: https://zephylin.github.io/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
