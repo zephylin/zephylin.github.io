@@ -1055,8 +1055,10 @@ button {
 }
 
 .footer-links a {
-  font-size: var(--text-sm);
+  display: inline-flex;
+  align-items: center;
   color: var(--color-text-muted);
+  transition: color var(--transition);
 }
 
 .footer-links a:hover {
